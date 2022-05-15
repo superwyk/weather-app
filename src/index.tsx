@@ -9,7 +9,9 @@ if ('addEventListener' in document) {
     document.addEventListener(
         'DOMContentLoaded',
         function () {
-            fastclick.FastClick.attach(document.body);
+            // eslint-disable-next-line
+            // @ts-ignore
+            fastclick?.attach(document.body);
         },
         false
     );
