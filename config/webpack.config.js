@@ -123,7 +123,7 @@ module.exports = function (webpackEnv) {
                         config: false,
                         plugins: !useTailwind
                             ? [
-                                  require('postcss-px-to-viewport')(require('./postcss.config')),
+                                  //   require('postcss-px-to-viewport')(require('./postcss.config')),
                                   'postcss-flexbugs-fixes',
                                   [
                                       'postcss-preset-env',
@@ -140,7 +140,7 @@ module.exports = function (webpackEnv) {
                                   'postcss-normalize'
                               ]
                             : [
-                                  require('postcss-px-to-viewport')(require('./postcss.config')),
+                                  //   require('postcss-px-to-viewport')(require('./postcss.config')),
                                   'tailwindcss',
                                   'postcss-flexbugs-fixes',
                                   [
