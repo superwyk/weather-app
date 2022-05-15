@@ -629,6 +629,11 @@ module.exports = function (webpackEnv) {
             // Generate a service worker script that will precache, and keep up to date,
             // the HTML & assets that are part of the webpack build.
             isEnvProduction &&
+                new WorkboxWebpackPlugin.GenerateSW({
+                    clientsClaim: true,
+                    skipWaiting: true
+                }),
+            isEnvProduction &&
                 fs.existsSync(swSrc) &&
                 new WorkboxWebpackPlugin.InjectManifest({
                     swSrc,
