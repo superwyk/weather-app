@@ -44,8 +44,10 @@ function Detail() {
                 </header>
                 <div className="weather-box">
                     <div className="current-location">
-                        {(data.location || ('' as string)).split('，').map((item: string) => (
-                            <div className="current-location-item">{item}</div>
+                        {(data.location || ('' as string)).split('，').map((item: string, index: number) => (
+                            <div className="current-location-item" key={index}>
+                                {item}
+                            </div>
                         ))}
                     </div>
                     <div className="current-temperature">

@@ -103,15 +103,12 @@ function Line({ data = [], className }: ILineProps) {
 
     useEffect(() => {
         let timer: NodeJS.Timeout | null = null;
-        console.log('aaa2');
         function resize() {
-            console.log('aaa1');
             if (timer) {
                 clearTimeout(timer);
             }
             timer = setTimeout(() => {
                 if (chartInstance.current) {
-                    console.log('aaa');
                     chartInstance.current?.resize?.();
                 }
             }, 150);
