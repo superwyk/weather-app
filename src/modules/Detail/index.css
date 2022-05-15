@@ -1,0 +1,155 @@
+.detail {
+    min-height: 100vh;
+}
+.detail .main {
+    max-width: var(--max-screen-width);
+    min-width: var(--min-screen-width);
+    margin: 0 auto;
+    height: 100vh;
+    position: relative;
+}
+.detail .header {
+    padding: 40px 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.detail .header .back {
+    padding: 30px; /* 增大点击区域 */
+    margin-left: -30px;
+    display: inline-block;
+    font-size: 18px;
+    color: #332821;
+}
+.detail .header .current-weather img {
+    width: 100px;
+    height: 100px;
+}
+.detail .weather-box {
+    margin: 0 20px 0 20px;
+}
+.detail .current-location {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #332821;
+    margin-top: -10px;
+}
+.detail .current-location .current-location-item:not(:last-child)::after {
+    content: '，';
+}
+.detail .current-temperature {
+    margin-top: 30px;
+}
+.detail .current-temperature span {
+    display: inline-block;
+    vertical-align: top;
+}
+.detail .current-temperature .large {
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 1;
+    text-align: center;
+    color: #332821;
+    margin-top: -8px;
+}
+.detail .current-temperature .small {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    color: #332821;
+}
+.detail .current-base {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail .current-base-label {
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+.detail .current-base-label .iconfont-root {
+    margin-right: 8px;
+}
+.detail .precipitation {
+    background: rgba(101, 142, 217, 0.1);
+    color: #658ed9;
+}
+.detail .humidity {
+    background: rgba(216, 97, 145, 0.1);
+    color: #d86191;
+}
+.detail .wind {
+    background: rgba(94, 79, 193, 0.1);
+    color: #5e4fc1;
+}
+
+.detail .line {
+    margin-top: 30px;
+}
+/* .detail .future-day-weather {
+} */
+.detail .future-day-weather .temperature-item {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.detail .future-day-weather .temperature span {
+    display: inline-block;
+    vertical-align: top;
+}
+.detail .future-day-weather .temperature .large {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
+    color: #332821;
+    margin-top: -4px;
+}
+.detail .future-day-weather .temperature .small {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1;
+    color: #332821;
+}
+.detail .future-day-weather .time {
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(51, 40, 33, 0.5);
+    text-align: center;
+    margin-top: 4px;
+}
+
+.detail .future-week-weather {
+    margin: 20px;
+}
+.detail .future-week-weather .list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+/* .detail .future-week-weather .list-item {
+   
+} */
+.detail .future-week-weather .list-item .date {
+    font-weight: 700;
+    line-height: 22px;
+    color: #332821;
+}
+.detail .future-week-weather .list-item .icon img {
+    width: 50px;
+    height: 50px;
+}
+.detail .future-week-weather .max-temperature {
+    color: #332821;
+    margin-right: 8px;
+}
+.detail .future-week-weather .max-temperature .small,
+.detail .future-week-weather .min-temperature .small {
+    font-size: 10px;
+    vertical-align: top;
+}
+.detail .future-week-weather .min-temperature {
+    color: rgba(51, 40, 33, 0.5);
+}
