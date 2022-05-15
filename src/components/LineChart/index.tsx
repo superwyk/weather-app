@@ -120,10 +120,7 @@ function Line({ data = [], className }: ILineProps) {
 
     return (
         <div>
-            <div
-                ref={lineContainerRef}
-                className={classnames(className)}
-                style={{ width: '100%', height: '120px' }}></div>
+            <div ref={lineContainerRef} className={classnames(className)}></div>
         </div>
     );
 }

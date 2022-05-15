@@ -85,6 +85,8 @@
 
 .detail .line {
     margin-top: 30px;
+    width: 100%;
+    height: 120px;
 }
 /* .detail .future-day-weather {
 } */
