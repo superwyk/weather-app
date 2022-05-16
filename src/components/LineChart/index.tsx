@@ -104,9 +104,7 @@ function Line({ data = [], className }: ILineProps) {
 
     useEffect(() => {
         let timer: NodeJS.Timeout | null = null;
-        console.log('resize init');
         function resize() {
-            console.log('resize');
             if (timer) {
                 clearTimeout(timer);
             }
