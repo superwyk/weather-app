@@ -64,7 +64,8 @@ function Line({ data = [], className }: ILineProps) {
                     {
                         type: 'inside',
                         start: 0,
-                        end: 50
+                        end: 50,
+                        zoomLock: true
                     }
                 ],
                 grid: {
@@ -103,7 +104,9 @@ function Line({ data = [], className }: ILineProps) {
 
     useEffect(() => {
         let timer: NodeJS.Timeout | null = null;
+        console.log('resize init');
         function resize() {
+            console.log('resize');
             if (timer) {
                 clearTimeout(timer);
             }
@@ -115,7 +118,7 @@ function Line({ data = [], className }: ILineProps) {
         }
         window.addEventListener('resize', resize);
 
-        return window.removeEventListener('resize', resize);
+        return () => window.removeEventListener('resize', resize);
     }, []);
 
     return (
